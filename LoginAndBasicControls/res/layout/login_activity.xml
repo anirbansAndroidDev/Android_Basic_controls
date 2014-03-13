@@ -1,0 +1,89 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="10sp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginMainActivity" >
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextUsername"
+            android:layout_alignRight="@+id/editTextUsername"
+            android:layout_below="@+id/editTextUsername"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gradient_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="8dp" />
+
+        <CheckBox
+            android:id="@+id/remember_me_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10sp"
+            android:button="@drawable/checkbox_selector"
+            android:checked="true"
+            android:text="  Remember Me"
+            android:textColor="#424242" />
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextPassword"
+            android:layout_below="@+id/remember_me_checkBox"
+            android:background="@drawable/gradient_button"
+            android:onClick="signIn"
+            android:text="Sign In"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonQuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonSignIn"
+            android:layout_alignBottom="@+id/buttonSignIn"
+            android:layout_alignRight="@+id/editTextPassword"
+            android:layout_marginLeft="14sp"
+            android:layout_toRightOf="@+id/buttonSignIn"
+            android:background="@drawable/gradient_button"
+            android:onClick="quit"
+            android:text="Quit"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLoginIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/gradient_edittext"
+            android:ems="12"
+            android:hint="UserName"
+            android:padding="8dp" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imageViewLoginIcon"
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8sp"
+            android:src="@drawable/login_icon" />
+    </RelativeLayout>
+
+</ScrollView>

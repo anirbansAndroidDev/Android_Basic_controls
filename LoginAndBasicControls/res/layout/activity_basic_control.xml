@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="5sp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5sp">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="5sp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Normal Spinner: " />
+
+                <Spinner 
+                    android:id="@+id/spinnerVehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_edittext"
+                    android:ems="10"
+                    android:hint="Vehicle Type"
+                    android:inputType="text"
+                    android:padding="8dp" 
+                    android:entries="@array/car_type_arrays"/>
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="5sp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name value Spinner: " />
+
+                <Spinner 
+                    android:id="@+id/nameAndValueSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_edittext"
+                    android:ems="10"
+                    android:hint="Vehicle Type"
+                    android:inputType="text"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="5sp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Date Picker:" />
+
+                <EditText
+                    android:id="@+id/editTextYearMade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_edittext"
+                    android:ems="10"
+                    android:hint="Pick a date"
+                    android:inputType="text"
+                    android:padding="8dp" 
+                    android:focusable="false"
+                    android:onClick="datePicker"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Time Picker:" />
+
+                <EditText
+                    android:id="@+id/editTextStartingRentalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_edittext"
+                    android:ems="10"
+                    android:hint="Pick a time"
+                    android:inputType="text"
+                    android:padding="8dp" 
+                    android:focusable="false"
+                    android:onClick="timePickerStartingRental">
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="5sp">
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</ScrollView>
