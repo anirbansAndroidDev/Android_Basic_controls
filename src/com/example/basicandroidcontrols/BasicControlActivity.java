@@ -131,32 +131,34 @@ public class BasicControlActivity extends Activity {
 
 	public void timePickerStartingRental(View v) 
 	{
-        Calendar mcurrentTime = Calendar.getInstance();
-        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-        int minute = mcurrentTime.get(Calendar.MINUTE);
-        TimePickerDialog mTimePicker;
-        mTimePicker = new TimePickerDialog(BasicControlActivity.this, new TimePickerDialog.OnTimeSetListener() 
-        {
-        	 @Override
-             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) 
-             {
-             	String selectedMinuteStr = selectedMinute + "";
-             	if(selectedMinuteStr.length()<2)
-             	{
-             		selectedMinuteStr = 0 + selectedMinuteStr;
-             	}
-             	
-             	String selectedHourStr = selectedHour + "";
-             	if(selectedHourStr.length()<2)
-             	{
-             		selectedHourStr = 0 + selectedHourStr;
-             	}
-             	
-             	editTextTimePicker.setText( "" + selectedHourStr + ":" + selectedMinuteStr);
-        }, hour, minute, true);
-        mTimePicker.setTitle("Select Time");
-        mTimePicker.show();
-    }
+		Calendar mcurrentTime = Calendar.getInstance();
+		int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+		int minute = mcurrentTime.get(Calendar.MINUTE);
+		TimePickerDialog mTimePicker;
+		mTimePicker = new TimePickerDialog(BasicControlActivity.this, new TimePickerDialog.OnTimeSetListener() 
+		{
+			@Override
+			public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) 
+			{
+				String selectedMinuteStr = selectedMinute + "";
+				if(selectedMinuteStr.length()<2)
+				{
+					selectedMinuteStr = 0 + selectedMinuteStr;
+				}
+
+				String selectedHourStr = selectedHour + "";
+				if(selectedHourStr.length()<2)
+				{
+					selectedHourStr = 0 + selectedHourStr;
+				}
+
+				editTextTimePicker.setText( "" + selectedHourStr + ":" + selectedMinuteStr);
+			}
+		}, hour, minute, true);
+		mTimePicker.setTitle("Select Time");
+		mTimePicker.show();
+	}
+	
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	//END Time picker
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
